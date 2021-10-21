@@ -14,11 +14,23 @@ body {
 #bgImg {
   position: absolute;
   height: 100%;
-  width: 100%;
-  top: -30px;
-  left: -25px;
-  transform: rotate(-11deg);
+  width: 104%;
+  top: -36px;
+  left: -2vw;
+  padding-bottom: 10px;
+  transform: rotate(-7deg);
   z-index: -1;
 }
 
-/* ------------------  ------------------ *//*# sourceMappingURL=index.css.map */
+/* ------------------  ------------------ */
+button {
+  position: absolute;
+  right: 5vw;
+  bottom: 30px;
+  height: 8vh;
+  width: 20vh;
+  background-color: #37687a;
+  color: #0c0c0c;
+  border-radius: 20vh;
+  border: none;
+}/*# sourceMappingURL=index.css.map */
