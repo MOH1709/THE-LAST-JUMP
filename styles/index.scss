@@ -1,0 +1,31 @@
+$primary: #37687a;
+$secondary: #0c0c0c;
+
+/* ----------------------------------------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $secondary;
+  overflow: hidden;
+}
+
+
+/* ------------------ BackGround Image ------------------ */
+
+#bgImg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -30px;
+  left: -25px;
+  transform: rotate(-11deg);
+  z-index: -1;
+}
+
+
+/* ------------------  ------------------ */
