@@ -1,12 +1,11 @@
 $primary: #37687a;
 $secondary: #0c0c0c;
+@use "./component.scss" as m;
 
-/* ----------------------------------------------- */
+/* ---------------------------------------------- */
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  @include m.all();
 }
 
 body {
@@ -15,30 +14,67 @@ body {
 }
 
 
-/* ------------------ BackGround Image ------------------ */
+/* ----------------------- BackGround Image ----------------------- */
 
 #bgImg {
   position: absolute;
   height: 100%;
-  width: 104%;
-  top: -36px;
+  width: 100%;
+  top: -27px;
   left: -2vw;
   padding-bottom: 10px;
-  transform: rotate(-7deg);
+  transform: rotate(-6deg);
   z-index: -1;
 }
 
 
-/* ------------------  ------------------ */
+/* ---------------------------------------------- */
+
+#title {
+  @include m.flexBox(column);
+  position: absolute;
+  top: 21vh;
+  left: 8vw;
+  color: $primary;
+  .title {
+    font-weight: 2;
+    font-size: 5vw;
+  }
+}
+
+
+/* ---------------------------------------------- */
+
+#rules {
+  @include m.flexBox(column);
+  position: absolute;
+  top: 5vh;
+  right: 0;
+  width: 40vw;
+  height: 60vh;
+  color: $primary;
+  ul {
+    margin-top: 20px;
+    li {
+      font-size: 3vh;
+      text-align: left;
+      margin-left: 5vw;
+      margin-block: 10px;
+    }
+  }
+}
+
+
+/* ---------------------------------------------- */
 
 button {
+  @include m.button($primary, $secondary);
   position: absolute;
-  right: 5vw;
-  bottom: 30px;
-  height: 8vh;
-  width: 20vh;
-  background-color: $primary;
-  color: $secondary;
-  border-radius: 20vh;
-  border: none;
+  right: 3vw;
+  bottom: 28px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: rotateY(20deg);
 }

@@ -1,8 +1,10 @@
-/* ----------------------------------------------- */
+/* ---------------------------------------------- */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Zilla Slab", serif;
+  cursor: pointer;
 }
 
 body {
@@ -10,27 +12,74 @@ body {
   overflow: hidden;
 }
 
-/* ------------------ BackGround Image ------------------ */
+/* ----------------------- BackGround Image ----------------------- */
 #bgImg {
   position: absolute;
   height: 100%;
-  width: 104%;
-  top: -36px;
+  width: 100%;
+  top: -27px;
   left: -2vw;
   padding-bottom: 10px;
-  transform: rotate(-7deg);
+  transform: rotate(-6deg);
   z-index: -1;
 }
 
-/* ------------------  ------------------ */
-button {
+/* ---------------------------------------------- */
+#title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: 5vw;
-  bottom: 30px;
-  height: 8vh;
-  width: 20vh;
+  top: 21vh;
+  left: 8vw;
+  color: #37687a;
+}
+#title .title {
+  font-weight: 2;
+  font-size: 5vw;
+}
+
+/* ---------------------------------------------- */
+#rules {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5vh;
+  right: 0;
+  width: 40vw;
+  height: 60vh;
+  color: #37687a;
+}
+#rules ul {
+  margin-top: 20px;
+}
+#rules ul li {
+  font-size: 3vh;
+  text-align: left;
+  margin-left: 5vw;
+  margin-block: 10px;
+}
+
+/* ---------------------------------------------- */
+button {
+  min-width: 100px;
+  height: 7vh;
+  width: 12vw;
   background-color: #37687a;
   color: #0c0c0c;
   border-radius: 20vh;
+  font-weight: bolder;
+  font-size: 3vh;
   border: none;
+  position: absolute;
+  right: 3vw;
+  bottom: 28px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: rotateY(20deg);
 }/*# sourceMappingURL=index.css.map */
