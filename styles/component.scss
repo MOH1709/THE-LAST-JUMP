@@ -1,0 +1,26 @@
+@mixin all {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Zilla Slab", serif;
+  cursor: pointer;
+}
+
+@mixin flexBox($dir) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button($bgColor, $textColor) {
+  min-width: 100px;
+  height: 7vh;
+  width: 12vw;
+  background-color: $bgColor;
+  color: $textColor;
+  border-radius: 20vh;
+  font-weight: bolder;
+  font-size: 3vh;
+  border: none;
+}
