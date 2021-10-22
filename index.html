@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,24 +22,25 @@
             <h2 class="title">JUMP</h2>
         </div>
         <div id="rules">
-            <h2>RULES</h2>
+            <h1>INFO</h1>
             <ul>
+                <li>Choose a destination number, and Maximum Jump allowed.</li>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, et?
+                    Each turn you can select jump between 1 and your allowed maximum jump
                 </li>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, et?
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, et?
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, et?
+                    Choose jump in such a way that, your last jump result's to the destination number you selected
                 </li>
             </ul>
         </div>
-        <button onclick="navHome">NEXT</button>
+        <button onclick="navHome()">NEXT</button>
     </div>
+
+    <script>
+        function navHome() {
+            window.open("./pages/home.html", "_self");
+        }
+    </script>
 </body>
 
 </html>
