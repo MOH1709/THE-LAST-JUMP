@@ -1,0 +1,133 @@
+$primary: #949597;
+$secondary: rgba(0, 0, 0, 0.911);
+@use "./component.scss" as m;
+
+/* ---------------------------------------------- */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* ---------------------------------------------- */
+
+* {
+  @include m.all();
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  opacity: 0.9;
+  position: absolute;
+  z-index: -1;
+  background: url("../Images/HomeScreenBG.jpg") no-repeat center center/cover;
+}
+
+
+/* ---------------------------------------------- */
+
+.container {
+  @include m.flexBox(column);
+  position: absolute;
+  right: 0;
+  bottom: 5vh;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 50%;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  right: -10vw;
+  bottom: -10vh;
+  z-index: -1;
+  opacity: 0.6;
+  border-bottom: 61vw solid $primary;
+  border-left: 70vw solid transparent;
+  opacity: 0.5;
+}
+
+
+/* ---------------------------------------------- */
+
+.destination {
+  @include m.flexBox(row);
+  flex-wrap: wrap;
+  font-size: 3vh;
+  margin: 3vh;
+  h2 {
+    margin: 3vh;
+  }
+  input {
+    @include m.button($primary,
+    $secondary);
+    outline: none;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+}
+
+
+/* ---------------------------------------------- */
+
+.jump {
+  @extend .destination;
+  input {
+    box-shadow: none;
+    margin-top: -3px;
+  }
+  label {
+    font-size: 5vh;
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* ---------------------------------------------- */
+
+.indicator {
+  @include m.flexBox(column);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  height: 20px;
+  background: $primary;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+/* ---------------------------------------------- */
+
+button {
+  @include m.button($primary,
+  $secondary);
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: rotateY(30deg);
+}
+
+input:hover {
+  opacity: 0.8;
+}
