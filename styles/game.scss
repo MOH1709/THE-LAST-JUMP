@@ -1,0 +1,89 @@
+$primary: #131D37;
+$secondary: #F0A702;
+@use "./component.scss" as m;
+
+/* ---------------------------------------------- */
+
+* {
+  @include m.all;
+}
+
+.screen {
+  @include m.button($primary, $secondary);
+  @include m.flexBox(row);
+  width: 50px;
+}
+
+button {
+  @include m.button($primary, $secondary);
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: rotateY(30deg);
+}
+
+
+/* ---------------------------------------------- */
+
+.container {
+  height: 100vh;
+  background: url("../Images/GameScreenBG.jpg") no-repeat center center/cover;
+}
+
+
+/* ---------------------------------------------- */
+
+.scoreboard {
+  @include m.flexBox(column);
+  width: 50%;
+  height: 80vh;
+  margin-left: 8vh;
+  div {
+    @include m.flexBox(row);
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+    h4 {
+      margin-right: 30px;
+      text-align: center;
+      color: white;
+      font-size: 5vh;
+    }
+  }
+}
+
+
+/* ---------------------------------------------- */
+
+.userScreen {
+  @include m.flexBox(column);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50vh;
+  width: 30%;
+  div {
+    margin-bottom: 2vh;
+  }
+  input {
+    margin-bottom: 8vh;
+    border-radius: 5vh;
+    width: 20vw;
+  }
+  input:hover {
+    opacity: 0.8;
+    transform: rotateY(10deg);
+  }
+  button {
+    margin-bottom: 2vh;
+  }
+}
+
+
+/* ---------------------------------------------- */
+
+input[type=range] {
+  -webkit-appearance: none;
+  height: 20px;
+  background: $primary;
+}

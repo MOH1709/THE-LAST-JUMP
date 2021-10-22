@@ -1,0 +1,108 @@
+/* ---------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Zilla Slab", serif;
+  cursor: pointer;
+}
+
+.screen {
+  min-width: 100px;
+  height: 7vh;
+  width: 12vw;
+  background-color: #131D37;
+  color: #F0A702;
+  border-radius: 20vh;
+  font-weight: bolder;
+  font-size: 3vh;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
+
+button {
+  min-width: 100px;
+  height: 7vh;
+  width: 12vw;
+  background-color: #131D37;
+  color: #F0A702;
+  border-radius: 20vh;
+  font-weight: bolder;
+  font-size: 3vh;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: rotateY(30deg);
+}
+
+/* ---------------------------------------------- */
+.container {
+  height: 100vh;
+  background: url("../Images/GameScreenBG.jpg") no-repeat center center/cover;
+}
+
+/* ---------------------------------------------- */
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 80vh;
+  margin-left: 8vh;
+}
+.scoreboard div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2vh;
+}
+.scoreboard div h4 {
+  margin-right: 30px;
+  text-align: center;
+  color: white;
+  font-size: 5vh;
+}
+
+/* ---------------------------------------------- */
+.userScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50vh;
+  width: 30%;
+}
+.userScreen div {
+  margin-bottom: 2vh;
+}
+.userScreen input {
+  margin-bottom: 8vh;
+  border-radius: 5vh;
+  width: 20vw;
+}
+.userScreen input:hover {
+  opacity: 0.8;
+  transform: rotateY(10deg);
+}
+.userScreen button {
+  margin-bottom: 2vh;
+}
+
+/* ---------------------------------------------- */
+input[type=range] {
+  -webkit-appearance: none;
+  height: 20px;
+  background: #131D37;
+}/*# sourceMappingURL=game.css.map */

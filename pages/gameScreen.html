@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Screen</title>
+
+    <link rel="stylesheet" href="../styles/game.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="scoreboard">
+            <div>
+                <h4>AI CHOICE</h4>
+                <div class="screen" id="aiChoice">Go 1st</div>
+            </div>
+            <div>
+                <h4>CURRENT</h4>
+                <div class="screen" id="curNum">0</div>
+            </div>
+            <div>
+                <h4>DESTINATION</h4>
+                <div class="screen" id="desNum">16</div>
+            </div>
+        </div>
+        <div class="userScreen">
+            <div id="choice" class="screen">3</div>
+            <input type="range" id="input" min="1" />
+            <button id="next">NEXT</button>
+            <button id="reset">RESET</button>
+        </div>
+    </div>
+    <script src="../js/game.js"></script>
+</body>
+
+</html>
