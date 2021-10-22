@@ -13,7 +13,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -50,6 +50,7 @@ body::before {
   width: 40vw;
   height: 60vh;
   border-radius: 50%;
+  margin-right: 60px;
 }
 
 .container::before {
@@ -108,7 +109,7 @@ body::before {
   @include m.flexBox(column);
 }
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   height: 20px;
   background: $primary;
