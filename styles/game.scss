@@ -1,5 +1,5 @@
-$primary: #131D37;
-$secondary: #F0A702;
+$primary: #131d37;
+$secondary: #f0a702;
 @use "./component.scss" as m;
 
 /* ---------------------------------------------- */
@@ -47,7 +47,7 @@ button:hover {
       margin-right: 30px;
       text-align: center;
       color: white;
-      font-size: 5vh;
+      font-size: 3vw;
     }
   }
 }
@@ -82,7 +82,7 @@ button:hover {
 
 /* ---------------------------------------------- */
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   height: 20px;
   background: $primary;
