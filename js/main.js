@@ -11,7 +11,11 @@ $("start").onclick = () => {
   let jump = +$("jump").value;
 
   if (destination <= jump) {
+<<<<<<< HEAD
     alert("AI Choose : " + destination + "\n" + "AI Won🥳");
+=======
+    alert("AI Choose : " + destination + "\n" + "AI Won🥳");
+>>>>>>> 2f4ca482a81c7996198ded2be8345b262d2b1f2f
     return;
   }
 
