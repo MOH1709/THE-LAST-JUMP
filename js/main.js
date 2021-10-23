@@ -7,11 +7,11 @@ window.onload = () => {
 
 //---------------------------------- start ----------------------------------
 $("start").onclick = () => {
-  let destination = $("des").value;
-  let jump = $("jump").value;
+  let destination = +$("des").value;
+  let jump = +$("jump").value;
 
   if (destination < jump) {
-    alert("AI Choose : " + destination + "\n" + "AI Won🥳");
+    alert("AI Choose : " + destination + jump + "\n" + "AI Won🥳");
     return;
   }
 
