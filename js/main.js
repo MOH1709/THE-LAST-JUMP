@@ -10,8 +10,8 @@ $("start").onclick = () => {
   let destination = +$("des").value;
   let jump = +$("jump").value;
 
-  if (destination < jump) {
-    alert("AI Choose : " + destination + jump + "\n" + "AI Won🥳");
+  if (destination <= jump) {
+    alert("AI Choose : " + destination + "\n" + "AI Won🥳");
     return;
   }
 
