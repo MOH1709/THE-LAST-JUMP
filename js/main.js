@@ -2,7 +2,6 @@ const $ = (id) => document.getElementById(id);
 
 window.onload = () => {
   $("jumpVal").innerHTML = $("jump").value;
-  $("jump").max = Math.floor($("des").value / 4);
 };
 
 //---------------------------------- start ----------------------------------
@@ -14,6 +13,7 @@ $("start").onclick = () => {
     alert("AI Choose : " + destination + "\n" + "AI Won🥳");
     return;
   }
+  $("des").value = "16";
 
   localStorage.setItem("des", destination);
   localStorage.setItem("jump", jump);
