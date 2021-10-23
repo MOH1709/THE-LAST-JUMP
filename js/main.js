@@ -1,15 +1,20 @@
-const $ = id => document.getElementById(id);
+const $ = (id) => document.getElementById(id);
 
 window.onload = () => {
   $("jumpVal").innerHTML = $("jump").value;
   $("jump").max = Math.floor($("des").value / 4);
-}
+};
 
 //---------------------------------- start ----------------------------------
 $("start").onclick = () => {
   let destination = $("des").value;
   let jump = $("jump").value;
-  
+
+  if (destination < jump) {
+    alert("AI Choose : " + destination + "\n" + "AI Won🥳");
+    return;
+  }
+
   localStorage.setItem("des", destination);
   localStorage.setItem("jump", jump);
   window.open("../pages/gameScreen.html", "_self");
