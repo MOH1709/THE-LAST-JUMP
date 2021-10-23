@@ -39,17 +39,19 @@ $("input").onchange = (e) => {
 };
 
 //---------------------------------- next ----------------------------------
-$("next").onclick = () => {
-  let curVal = $("curNum").innerText;
-  let pos = +curVal;
+windows.onload = () => {
+  $("next").onclick = () => {
+    let curVal = $("curNum").innerText;
+    let pos = +curVal;
 
-  pos += parseInt($("input").value);
-  $("curNum").value = pos;
-  $("curNum").innerHTML = pos;
-  if (pos >= des) {
-    alert("You Won🎉🤝");
-    reset();
-  }
+    pos += parseInt($("input").value);
+    $("curNum").value = pos;
+    $("curNum").innerHTML = pos;
+    if (pos >= des) {
+      alert("You Won🎉🤝");
+      reset();
+    }
+  };
 
   //---------------------------------- AI Turn ----------------------------------
 
