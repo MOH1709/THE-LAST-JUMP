@@ -2,6 +2,7 @@ const $ = (id) => document.getElementById(id);
 let jump = 0;
 let des = 0;
 let turn = 0;
+let isLoaded = false;
 
 //--------------------------------------------------------------------
 function winPos() {
@@ -31,6 +32,7 @@ window.onload = () => {
     $("curNum").innerHTML = AIMove(-1);
     turn = 1;
   }
+  isLoaded = true;
 };
 
 //--------------------------------------------------------------------
@@ -39,8 +41,9 @@ $("input").onchange = (e) => {
 };
 
 //---------------------------------- next ----------------------------------
-windows.onload = () => {
-  $("next").onclick = () => {
+
+$("next").onclick = () => {
+  if (isLoaded) {
     let curVal = $("curNum").innerText;
     let pos = +curVal;
 
@@ -51,7 +54,8 @@ windows.onload = () => {
       alert("You Won🎉🤝");
       reset();
     }
-  };
+  }
+}
 
   //---------------------------------- AI Turn ----------------------------------
 
