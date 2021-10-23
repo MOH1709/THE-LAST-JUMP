@@ -37,9 +37,10 @@ window.onload = () => {
 
 //--------------------------------------------------------------------
 $("input").onchange = (e) => {
-  $("choice").innerHTML = e.target.value;
+  if (isLoaded) {
+    $("choice").innerHTML = e.target.value;
+  }
 };
-
 //---------------------------------- next ----------------------------------
 
 $("next").onclick = () => {
