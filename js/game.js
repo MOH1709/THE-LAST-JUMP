@@ -54,23 +54,22 @@ $("next").onclick = () => {
       alert("You Won🎉🤝");
       reset();
     }
+
+    //---------------------------------- AI Turn ----------------------------------
+
+    setTimeout(() => {
+      curVal = AIMove(pos - 1);
+      $("aiChoice").innerHTML = "+" + curVal;
+      $("curNum").innerHTML = pos + curVal;
+      if (pos + curVal == des) {
+        alert("AI choose : " + curVal + "\nAI Wins🎉🥳");
+        reset();
+      } else {
+        alert("AI's Choose : " + "+" + curVal);
+        turn++;
+      }
+    }, 50);
   }
-}
-
-  //---------------------------------- AI Turn ----------------------------------
-
-  setTimeout(() => {
-    curVal = AIMove(pos - 1);
-    $("aiChoice").innerHTML = "+" + curVal;
-    $("curNum").innerHTML = pos + curVal;
-    if (pos + curVal == des) {
-      alert("AI choose : " + curVal + "\nAI Wins🎉🥳");
-      reset();
-    } else {
-      alert("AI's Choose : " + "+" + curVal);
-      turn++;
-    }
-  }, 50);
 };
 //---------------------------------- Reset ----------------------------------
 $("reset").onclick = () => {
