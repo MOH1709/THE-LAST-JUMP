@@ -22,6 +22,11 @@ window.onload = () => {
   jump = +localStorage.getItem("jump");
   des = +localStorage.getItem("des");
 
+  if (des < jump) {
+    alert("You Won🎉🤝");
+    reset();
+  }
+
   $("desNum").innerHTML = des;
   $("input").max = localStorage.getItem("jump");
 
