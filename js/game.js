@@ -10,7 +10,7 @@ function winPos() {
 }
 
 function AIMove(curNum) {
-  return Math.abs(winPos() - curNum);
+  return Math.min(Math.abs(winPos() - curNum), jump);
 }
 
 function reset() {
@@ -27,12 +27,22 @@ window.onload = () => {
 
   $("choice").innerHTML = $("input").value;
 
-  if (winPos() < jump) {
-    $("aiChoice").innerHTML = "+" + AIMove(-1);
-    $("curNum").innerHTML = AIMove(-1);
-    turn = 1;
-  }
   isLoaded = true;
+};
+
+//--------------------------------------------------------------------
+$("AI").onclick = () => {
+  $("container").style.display = "block";
+  $("turn").style.display = "none";
+
+  $("aiChoice").innerHTML = "+" + AIMove(-1);
+  $("curNum").innerHTML = AIMove(-1);
+  turn = 1;
+};
+
+$("user").onclick = () => {
+  $("container").style.display = "block";
+  $("turn").style.display = "none";
 };
 
 //--------------------------------------------------------------------

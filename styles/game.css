@@ -7,6 +7,11 @@
   cursor: pointer;
 }
 
+body {
+  height: 100vh;
+  background: url("../Images/GameScreenBG.jpg") no-repeat center center/cover;
+}
+
 .screen {
   min-width: 100px;
   height: 7vh;
@@ -42,9 +47,43 @@ button:hover {
 }
 
 /* ---------------------------------------------- */
-.container {
-  height: 100vh;
-  background: url("../Images/GameScreenBG.jpg") no-repeat center center/cover;
+#turn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 12.5vh;
+  margin-left: 12.5vw;
+  border-radius: 30px;
+  height: 75vh;
+  width: 75vw;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.568);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#turn h4 {
+  font-size: 5vw;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #f0a702;
+}
+#turn .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#turn button {
+  margin-inline: 40px;
+  margin-bottom: 30px;
+}
+
+/* ---------------------------------------------- */
+#container {
+  display: none;
 }
 
 /* ---------------------------------------------- */

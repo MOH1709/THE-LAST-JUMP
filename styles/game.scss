@@ -8,14 +8,21 @@ $secondary: #f0a702;
   @include m.all;
 }
 
+body {
+  height: 100vh;
+  background: url("../Images/GameScreenBG.jpg") no-repeat center center/cover;
+}
+
 .screen {
-  @include m.button($primary, $secondary);
+  @include m.button($primary,
+  $secondary);
   @include m.flexBox(row);
   width: 50px;
 }
 
 button {
-  @include m.button($primary, $secondary);
+  @include m.button($primary,
+  $secondary);
 }
 
 button:hover {
@@ -26,9 +33,38 @@ button:hover {
 
 /* ---------------------------------------------- */
 
-.container {
-  height: 100vh;
-  background: url("../Images/GameScreenBG.jpg") no-repeat center center/cover;
+#turn {
+  @include m.flexBox(column);
+  position: absolute;
+  margin-top: 12.5vh;
+  margin-left: 12.5vw;
+  border-radius: 30px;
+  height: 75vh;
+  width: 75vw;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.568);
+  backdrop-filter: blur(5px);
+  h4 {
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: 50px;
+    color: $secondary;
+  }
+  .button {
+    @include m.flexBox(row);
+    flex-wrap: wrap;
+  }
+  button {
+    margin-inline: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* ---------------------------------------------- */
+
+#container {
+  display: none;
 }
 
 
