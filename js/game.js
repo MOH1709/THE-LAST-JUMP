@@ -43,6 +43,7 @@ $("AI").onclick = () => {
 $("user").onclick = () => {
   $("container").style.display = "block";
   $("turn").style.display = "none";
+  turn = 1;
 };
 
 //---------------------------------- user input ----------------------------------
@@ -72,7 +73,7 @@ $("next").onclick = () => {
       curVal = AIMove(pos - 1);
       $("aiChoice").innerHTML = "+" + curVal;
       $("curNum").innerHTML = pos + curVal;
-      if (pos + curVal == des) {
+      if (pos + curVal >= des) {
         alert("AI choose : " + curVal + "\nAI Wins🎉🥳");
         reset();
       } else {
