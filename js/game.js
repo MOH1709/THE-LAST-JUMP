@@ -4,7 +4,7 @@ let des = 0;
 let turn = 0;
 let isLoaded = false;
 
-//--------------------------------------------------------------------
+//---------------------- self defined functions ----------------------
 function winPos() {
   return ((des - 1) % (jump + 1)) + (jump + 1) * turn;
 }
@@ -17,7 +17,7 @@ function reset() {
   window.history.go(-1);
 }
 
-//--------------------------------------------------------------------
+//------------------------------- on Load -------------------------------
 window.onload = () => {
   jump = +localStorage.getItem("jump");
   des = +localStorage.getItem("des");
@@ -30,7 +30,7 @@ window.onload = () => {
   isLoaded = true;
 };
 
-//--------------------------------------------------------------------
+//---------------------------------- first turn ----------------------------------
 $("AI").onclick = () => {
   $("container").style.display = "block";
   $("turn").style.display = "none";
@@ -45,7 +45,7 @@ $("user").onclick = () => {
   $("turn").style.display = "none";
 };
 
-//--------------------------------------------------------------------
+//---------------------------------- user input ----------------------------------
 $("input").onchange = (e) => {
   if (isLoaded) {
     $("choice").innerHTML = e.target.value;
