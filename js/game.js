@@ -43,7 +43,6 @@ $("AI").onclick = () => {
 $("user").onclick = () => {
   $("container").style.display = "block";
   $("turn").style.display = "none";
-  turn = 1;
 };
 
 //---------------------------------- user input ----------------------------------
@@ -66,6 +65,8 @@ $("next").onclick = () => {
       alert("You Won🎉🤝");
       reset();
     }
+
+    if (winPos() + 1 == pos) turn++;
 
     //---------------------------------- AI Turn ----------------------------------
 
