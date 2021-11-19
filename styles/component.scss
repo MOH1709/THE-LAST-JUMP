@@ -4,6 +4,8 @@
   box-sizing: border-box;
   font-family: "Zilla Slab", serif;
   cursor: pointer;
+  /* For removing Blue Screen Effect on Mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
 @mixin flexBox($dir) {
