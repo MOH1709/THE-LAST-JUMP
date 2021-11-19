@@ -94,7 +94,7 @@ button:hover {
   align-items: center;
   width: 50%;
   height: 80vh;
-  margin-left: 8vh;
+  margin-left: 5vw;
 }
 .scoreboard div {
   display: flex;
@@ -120,7 +120,7 @@ button:hover {
   align-items: center;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 20px;
   height: 50vh;
   width: 30%;
 }
